@@ -1,0 +1,69 @@
+:mod:`arche.report`
+===================
+
+.. py:module:: arche.report
+
+
+Module Contents
+---------------
+
+.. data:: display_markdown
+   
+
+   
+
+.. py:class:: Report
+
+   .. method:: save(self, result:Result)
+
+
+
+   .. method:: write_color_text(text:str, color:Fore=Fore.RED)
+      :staticmethod:
+
+
+
+   .. method:: write_rule_name(rule_name:str)
+      :staticmethod:
+
+
+
+   .. method:: write(cls, text:str)
+      :classmethod:
+
+
+
+   .. method:: write_summaries(self)
+
+
+
+   .. method:: write_summary(cls, result:Result)
+      :classmethod:
+
+
+
+   .. method:: write_rule_outcome(cls, outcome:str, level:Level=Level.INFO)
+      :classmethod:
+
+
+
+   .. method:: write_details(self, short:bool=False, keys_limit:int=10)
+
+
+
+   .. method:: write_rule_details(cls, result:Result, short:bool=False, keys_limit:int=10)
+      :classmethod:
+
+
+
+   .. method:: write_detailed_errors(cls, errors:Dict, short:bool, keys_limit:int)
+      :classmethod:
+
+
+
+   .. method:: sample_keys(keys:pd.Series, limit:int)
+      :staticmethod:
+
+
+
+

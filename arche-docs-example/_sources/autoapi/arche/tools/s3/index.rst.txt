@@ -1,0 +1,44 @@
+:mod:`arche.tools.s3`
+=====================
+
+.. py:module:: arche.tools.s3
+
+.. autoapi-nested-parse::
+
+   AWS methods. Credentials are expected to be set in environment
+
+
+
+Module Contents
+---------------
+
+.. function:: upload_str_stream(bucket:str, key:str, stream:io.StringIO) -> str
+
+   Upload a whole StringIO to S3 bucket as file.
+
+   :param bucket: bucket name
+   :param key: destination path
+   :param stream: stream object
+
+   :returns: public url to uploaded file
+
+
+.. function:: get_contents_from_bucket(bucket:str, filepath:str) -> str
+
+   Fetch file contents from s3 bucket.
+
+   :param bucket: bucket name
+   :param filepath: a relative path to file
+
+   :returns: utf-8 decoded string
+
+
+.. function:: get_contents(url:str) -> str
+
+   Fetch file contents from the remote source.
+
+   :param url: uri path to a file. Allows only s3, https.
+
+   :returns: utf-8 decoded string
+
+

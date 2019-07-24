@@ -1,0 +1,32 @@
+:mod:`arche.rules.metadata`
+===========================
+
+.. py:module:: arche.rules.metadata
+
+
+Module Contents
+---------------
+
+.. function:: check_errors(source_job:Job, target_job:Optional[Job]=None) -> Result
+
+
+.. function:: check_outcome(job:Job) -> Result
+
+
+.. function:: compare_response_ratio(source_job:Job, target_job:Job) -> Result
+
+   Compare request with response per item ratio
+
+
+.. function:: compare_number_of_scraped_items(source_job:Job, target_job:Job) -> Result
+
+
+.. function:: compare_spider_names(source_job:Job, target_job:Job) -> Result
+
+
+.. function:: compare_runtime(source_job:Job, target_job:Job) -> Result
+
+
+.. function:: compare_finish_time(source_job:Job, target_job:Job) -> Result
+
+

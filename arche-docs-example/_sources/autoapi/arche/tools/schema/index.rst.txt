@@ -1,0 +1,51 @@
+:mod:`arche.tools.schema`
+=========================
+
+.. py:module:: arche.tools.schema
+
+
+Module Contents
+---------------
+
+.. function:: basic_json_schema(data_source:str, items_numbers:List[int]=None) -> Schema
+
+   Print a json schema based on the provided job_key and item numbers
+
+   :param data_source: a collection or job key
+   :param items_numbers: array of item numbers to create schema from
+
+
+.. function:: create_json_schema(source_key:str, items_numbers:Optional[List[int]]=None) -> Schema
+
+
+.. function:: infer_schema(samples:List[Dict[str, Any]]) -> Schema
+
+
+.. function:: set_item_no(items_count:int) -> List[int]
+
+   Generate random numbers within items_count range
+
+   :returns: Random 4 numbers if items_count > 4 otherwise items numbers
+
+
+.. function:: fast_validate(schema:Schema, raw_items:RawItems, keys:pd.Index) -> Dict[str, set]
+
+   Verify items one by one. It stops after the first error in an item in most cases.
+   Faster than jsonschema validation
+
+   :param schema: a JSON schema
+   :param raw_items: a raw data to validate one by one
+   :param keys: keys corresponding to raw_items index
+
+   :returns: A dictionary of errors with message and item keys
+
+
+.. function:: full_validate(schema:Schema, raw_items:RawItems, keys:pd.Index) -> Dict[str, set]
+
+   This function uses jsonschema validator which returns all found error per item.
+   See `fast_validate()` for arguments descriptions.
+
+
+.. function:: format_validation_message(error_msg:str, path:Deque, schema_path:Deque, validator:str) -> str
+
+

@@ -1,0 +1,42 @@
+:mod:`arche`
+============
+
+.. py:module:: arche
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   figures/index.rst
+   readers/index.rst
+   rules/index.rst
+   tools/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   arche/index.rst
+   data_quality_report/index.rst
+   quality_estimation_algorithm/index.rst
+   report/index.rst
+   schema_definitions/index.rst
+
+
+Package Contents
+----------------
+
+.. function:: basic_json_schema(data_source:str, items_numbers:List[int]=None) -> Schema
+
+   Print a json schema based on the provided job_key and item numbers
+
+   :param data_source: a collection or job key
+   :param items_numbers: array of item numbers to create schema from
+
+

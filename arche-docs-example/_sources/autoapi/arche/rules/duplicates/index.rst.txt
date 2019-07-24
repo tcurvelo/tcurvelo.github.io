@@ -1,0 +1,28 @@
+:mod:`arche.rules.duplicates`
+=============================
+
+.. py:module:: arche.rules.duplicates
+
+
+Module Contents
+---------------
+
+.. function:: find_by_unique(df:pd.DataFrame, tagged_fields:TaggedFields) -> Result
+
+   Verify if each item field tagged with `unique` is unique.
+
+   :returns: A result containing field names and keys for non unique items
+
+
+.. function:: find_by(df:pd.DataFrame, columns:List[str]) -> Result
+
+   Compare items rows in `df` by `columns`
+
+   :returns: Any duplicates
+
+
+.. function:: find_by_name_url(df:pd.DataFrame, tagged_fields:TaggedFields) -> Result
+
+   Check for items with the same name and url
+
+

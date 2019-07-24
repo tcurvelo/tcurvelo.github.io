@@ -1,0 +1,33 @@
+:mod:`arche.rules.price`
+========================
+
+.. py:module:: arche.rules.price
+
+
+Module Contents
+---------------
+
+.. function:: compare_was_now(df:pd.DataFrame, tagged_fields:TaggedFields)
+
+   Compare price_was and price_now tagged fields
+
+
+.. function:: compare_prices_for_same_urls(source_df:pd.DataFrame, target_df:pd.DataFrame, tagged_fields:TaggedFields)
+
+   For each pair of items that have the same `product_url_field` tagged field,
+   compare `product_price_field` field
+
+   :returns: A result containing pairs of items with same `product_url_field`
+             from `source_df` and `target_df` which `product_price_field` differ,
+             missing and new `product_url_field` tagged fields.
+
+
+.. function:: compare_names_for_same_urls(source_df:pd.DataFrame, target_df:pd.DataFrame, tagged_fields:TaggedFields)
+
+   For each pair of items that have the same `product_url_field` tagged field,
+   compare `name_field` field
+
+
+.. function:: compare_prices_for_same_names(source_df:pd.DataFrame, target_df:pd.DataFrame, tagged_fields:TaggedFields)
+
+

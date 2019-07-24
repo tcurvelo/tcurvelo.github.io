@@ -1,0 +1,20 @@
+.. Arche documentation master file, created by
+
+Welcome to Arche's documentation!
+=================================
+
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Contents:
+
+   Handling-items-of-different-types
+   nbs/notebooks
+   settings
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

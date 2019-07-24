@@ -1,0 +1,44 @@
+:mod:`arche.quality_estimation_algorithm`
+=========================================
+
+.. py:module:: arche.quality_estimation_algorithm
+
+
+Module Contents
+---------------
+
+.. function:: generate_quality_estimation(job, crawlera_user, no_of_validation_warnings, no_of_duplicated_items, checked_dup_items_count, no_of_duplicated_skus, no_of_checked_skus_items, no_of_price_warns, no_of_checked_price_items, tested, **kwargs)
+
+
+.. function:: check_percentage(rule, scraped_items)
+
+
+.. function:: get_adherence_to_schema_percent(rule_result, no_of_scraped_items)
+
+
+.. function:: get_duplicated_items_percent(rule_result, no_of_scraped_items)
+
+
+.. function:: get_duplicated_skus_percent(rule_result, no_of_scraped_items)
+
+
+.. function:: get_crawlera_incapsula_percent(crawlera_user)
+
+   Having crawlera/incapsula enabled makes spider more unstable
+
+
+.. function:: get_errors_count_percent(rule_result)
+
+
+.. function:: get_price_was_price_now_comparison_percent(rule_result, no_of_scraped_items)
+
+
+.. function:: get_outcome_percent(job_state, job_close_reason)
+
+
+.. function:: get_response_status_count_percent(rule_result)
+
+
+.. function:: get_tested_percent(rule_result)
+
+

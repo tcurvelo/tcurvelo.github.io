@@ -1,0 +1,12 @@
+:mod:`arche.tools.maintenance`
+==============================
+
+.. py:module:: arche.tools.maintenance
+
+
+Module Contents
+---------------
+
+.. function:: deprecate(reason:str, replacement:Optional[str]=None, gone_in:Optional[str]=None)
+
+

@@ -1,0 +1,22 @@
+:mod:`arche.rules`
+==================
+
+.. py:module:: arche.rules
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   category/index.rst
+   coverage/index.rst
+   duplicates/index.rst
+   json_schema/index.rst
+   metadata/index.rst
+   others/index.rst
+   price/index.rst
+   result/index.rst
+
+

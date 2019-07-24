@@ -1,0 +1,14 @@
+:mod:`arche.schema_definitions`
+===============================
+
+.. py:module:: arche.schema_definitions
+
+
+Module Contents
+---------------
+
+.. data:: extension
+   
+
+   
+

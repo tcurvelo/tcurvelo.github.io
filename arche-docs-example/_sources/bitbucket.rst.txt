@@ -1,0 +1,15 @@
+Settings
+========
+
+
+Bitbucket access
+----------------
+For bitbucket access, you have to set up either:
+
+- `BITBUCKET_USER` and `BITBUCKET_PASSWORD` or
+- `BITBUCKET_TOKEN` environment variables.
+
+
+<script>
+    alert('oi')
+</script>

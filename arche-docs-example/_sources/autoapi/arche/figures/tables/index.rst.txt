@@ -1,0 +1,27 @@
+:mod:`arche.figures.tables`
+===========================
+
+.. py:module:: arche.figures.tables
+
+
+Module Contents
+---------------
+
+.. function:: score_table(quality_estimation, field_accuracy) -> go.FigureWidget
+
+
+.. function:: get_color(value)
+
+
+.. function:: job_summary_table(job) -> go.FigureWidget
+
+
+.. function:: rules_summary_table(df, no_of_validation_warnings, name_field, url_field, no_of_checked_duplicated_items, no_of_duplicated_items, unique, no_of_checked_skus, no_of_duplicated_skus, price_field, price_was_field, no_of_checked_price_items, no_of_price_warns, **kwargs) -> go.FigureWidget
+
+
+.. function:: get_rule_status(err_values_number)
+
+
+.. function:: coverage_by_categories(category_field, df, product_url_fields) -> go.FigureWidget
+
+

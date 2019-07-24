@@ -1,0 +1,117 @@
+:mod:`arche.readers.schema`
+===========================
+
+.. py:module:: arche.readers.schema
+
+
+Module Contents
+---------------
+
+.. data:: EXTENDED_KEYWORDS
+   
+
+   
+
+.. data:: SchemaObject
+   
+
+   
+
+.. data:: RawSchema
+   
+
+   
+
+.. data:: SchemaSource
+   
+
+   
+
+.. data:: TaggedFields
+   
+
+   
+
+.. function:: set_auth() -> None
+
+
+.. py:class:: Tag
+
+   Bases: :class:`enum.Enum`
+
+   .. attribute:: unique
+      :annotation: = [0]
+
+      
+
+   .. attribute:: category
+      :annotation: = [1]
+
+      
+
+   .. attribute:: name_field
+      :annotation: = [2]
+
+      
+
+   .. attribute:: product_url_field
+      :annotation: = [3]
+
+      
+
+   .. attribute:: product_price_field
+      :annotation: = [4]
+
+      
+
+   .. attribute:: product_price_was_field
+      :annotation: = [5]
+
+      
+
+
+.. py:class:: Schema(source:SchemaSource)
+
+   .. attribute:: allowed_tags
+      
+
+      
+
+   .. method:: json(self)
+
+
+
+   .. method:: __repr__(self)
+
+
+
+   .. method:: get_enums(self)
+
+
+
+   .. method:: get_tags(schema:RawSchema)
+      :staticmethod:
+
+
+
+   .. method:: get_field_tags(cls, tags:List[str], field:str, tagged_fields:defaultdict)
+      :classmethod:
+
+
+
+   .. method:: parse_tag(value)
+      :staticmethod:
+
+
+
+   .. method:: read(schema_source:SchemaSource)
+      :staticmethod:
+
+
+
+   .. method:: from_url(path:str)
+      :staticmethod:
+
+
+
+

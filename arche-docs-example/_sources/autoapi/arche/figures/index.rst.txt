@@ -1,0 +1,15 @@
+:mod:`arche.figures`
+====================
+
+.. py:module:: arche.figures
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   tables/index.rst
+
+

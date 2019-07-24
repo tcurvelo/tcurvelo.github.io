@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>arche.readers.items &#8212; Arche 0.3.6 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-arche.readers.items">
+<span id="arche-readers-items"></span><h1><a class="reference internal" href="#module-arche.readers.items" title="arche.readers.items"><code class="xref py py-mod docutils literal notranslate"><span class="pre">arche.readers.items</span></code></a><a class="headerlink" href="#module-arche.readers.items" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="arche.readers.items.RawItems">
+<code class="sig-prename descclassname">arche.readers.items.</code><code class="sig-name descname">RawItems</code><a class="headerlink" href="#arche.readers.items.RawItems" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="arche.readers.items.Items">
+<em class="property">class </em><code class="sig-prename descclassname">arche.readers.items.</code><code class="sig-name descname">Items</code><span class="sig-paren">(</span><em class="sig-param">raw:RawItems</em>, <em class="sig-param">df:pd.DataFrame</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.Items" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="arche.readers.items.Items.__len__">
+<code class="sig-name descname">__len__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.Items.__len__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.Items.process_df">
+<em class="property">static </em><code class="sig-name descname">process_df</code><span class="sig-paren">(</span><em class="sig-param">df:pd.DataFrame</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.Items.process_df" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.Items.categorize">
+<em class="property">static </em><code class="sig-name descname">categorize</code><span class="sig-paren">(</span><em class="sig-param">df:pd.DataFrame</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.Items.categorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cast columns with repeating values to <cite>category</cite> type to save memory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.Items.origin_column_name">
+<code class="sig-name descname">origin_column_name</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">new:str</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.Items.origin_column_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.Items.from_df">
+<em class="property">classmethod </em><code class="sig-name descname">from_df</code><span class="sig-paren">(</span><em class="sig-param">cls</em>, <em class="sig-param">df:pd.DataFrame</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.Items.from_df" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.Items.from_array">
+<em class="property">classmethod </em><code class="sig-name descname">from_array</code><span class="sig-paren">(</span><em class="sig-param">cls</em>, <em class="sig-param">iterable:RawItems</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.Items.from_array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="arche.readers.items.CloudItems">
+<em class="property">class </em><code class="sig-prename descclassname">arche.readers.items.</code><code class="sig-name descname">CloudItems</code><span class="sig-paren">(</span><em class="sig-param">key:str</em>, <em class="sig-param">count:Optional[int]=None</em>, <em class="sig-param">filters:Optional[api.Filters]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CloudItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arche.readers.items.Items" title="arche.readers.items.Items"><code class="xref py py-class docutils literal notranslate"><span class="pre">arche.readers.items.Items</span></code></a></p>
+<dl class="method">
+<dt id="arche.readers.items.CloudItems.limit">
+<em class="property">property </em><code class="sig-name descname">limit</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CloudItems.limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum number of items in source</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.CloudItems.count">
+<em class="property">property </em><code class="sig-name descname">count</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CloudItems.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of items users wants to retrieve</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.CloudItems.fetch_data">
+<em class="property">abstract </em><code class="sig-name descname">fetch_data</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CloudItems.fetch_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.CloudItems.format_keys">
+<em class="property">abstract </em><code class="sig-name descname">format_keys</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">keys:pd.Series</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CloudItems.format_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="arche.readers.items.JobItems">
+<em class="property">class </em><code class="sig-prename descclassname">arche.readers.items.</code><code class="sig-name descname">JobItems</code><span class="sig-paren">(</span><em class="sig-param">key:str</em>, <em class="sig-param">count:Optional[int]=None</em>, <em class="sig-param">start_index:int=0</em>, <em class="sig-param">filters:Optional[api.Filters]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.JobItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arche.readers.items.CloudItems" title="arche.readers.items.CloudItems"><code class="xref py py-class docutils literal notranslate"><span class="pre">arche.readers.items.CloudItems</span></code></a></p>
+<dl class="method">
+<dt id="arche.readers.items.JobItems.limit">
+<em class="property">property </em><code class="sig-name descname">limit</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.JobItems.limit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.JobItems.count">
+<em class="property">property </em><code class="sig-name descname">count</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.JobItems.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.JobItems.job">
+<em class="property">property </em><code class="sig-name descname">job</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.JobItems.job" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.JobItems.fetch_data">
+<code class="sig-name descname">fetch_data</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.JobItems.fetch_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.JobItems.format_keys">
+<code class="sig-name descname">format_keys</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">keys:pd.Series</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.JobItems.format_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Scrapy Cloud url to an item
+E.g. 112358/13/21/0 to <a class="reference external" href="https://app.scrapinghub.com/p/112358/13/21/item/0">https://app.scrapinghub.com/p/112358/13/21/item/0</a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="arche.readers.items.CollectionItems">
+<em class="property">class </em><code class="sig-prename descclassname">arche.readers.items.</code><code class="sig-name descname">CollectionItems</code><span class="sig-paren">(</span><em class="sig-param">key:str</em>, <em class="sig-param">count:Optional[int]=None</em>, <em class="sig-param">start:Optional[str]=None</em>, <em class="sig-param">filters:Optional[api.Filters]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CollectionItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arche.readers.items.CloudItems" title="arche.readers.items.CloudItems"><code class="xref py py-class docutils literal notranslate"><span class="pre">arche.readers.items.CloudItems</span></code></a></p>
+<dl class="method">
+<dt id="arche.readers.items.CollectionItems.limit">
+<em class="property">property </em><code class="sig-name descname">limit</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CollectionItems.limit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.CollectionItems.count">
+<em class="property">property </em><code class="sig-name descname">count</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CollectionItems.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.CollectionItems.fetch_data">
+<code class="sig-name descname">fetch_data</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CollectionItems.fetch_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.items.CollectionItems.format_keys">
+<code class="sig-name descname">format_keys</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">keys:pd.Series</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.items.CollectionItems.format_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get full Scrapy Cloud url from <cite>_key</cite>
+E.g. be-006 to <a class="reference external" href="https://app.scrapinghub.com/p/collections/s/pages/be-006">https://app.scrapinghub.com/p/collections/s/pages/be-006</a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">Arche</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Handling-items-of-different-types.html">Handling items of different types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018-2019, Arche developers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../../_sources/autoapi/arche/readers/items/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

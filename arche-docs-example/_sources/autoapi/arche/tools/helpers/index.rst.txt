@@ -1,0 +1,49 @@
+:mod:`arche.tools.helpers`
+==========================
+
+.. py:module:: arche.tools.helpers
+
+
+Module Contents
+---------------
+
+.. py:class:: CollectionKey(project_key, store_key)
+
+   .. method:: __str__(self)
+
+
+
+
+.. function:: is_collection_key(value:str) -> bool
+
+   <project id>/collections/s/<name>
+
+
+.. function:: parse_collection_key(value)
+
+
+.. function:: is_job_key(value)
+
+
+.. function:: ms_to_time(ms:int) -> Optional[str]
+
+   Convert ms to human time, stripping ms.
+
+   >>> ms_to_time(12345678901)
+   142 days, 21:21:18
+
+
+.. function:: ratio_diff(source, target)
+
+   Return a difference in ratio between two values
+
+
+.. function:: to_float_or_zero(value)
+
+
+.. function:: is_number(s)
+
+
+.. function:: cpus_count() -> int
+
+

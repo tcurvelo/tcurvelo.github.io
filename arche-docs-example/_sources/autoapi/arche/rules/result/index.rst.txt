@@ -1,0 +1,227 @@
+:mod:`arche.rules.result`
+=========================
+
+.. py:module:: arche.rules.result
+
+
+Module Contents
+---------------
+
+.. data:: Stat
+   
+
+   
+
+.. data:: COLORS
+   
+
+   
+
+.. py:class:: Level
+
+   Bases: :class:`enum.Enum`
+
+   .. attribute:: ERROR
+      :annotation: = 2
+
+      
+
+   .. attribute:: WARNING
+      :annotation: = 1
+
+      
+
+   .. attribute:: INFO
+      :annotation: = 0
+
+      
+
+
+.. py:class:: Outcome
+
+   Bases: :class:`enum.Enum`
+
+   .. attribute:: SKIPPED
+      :annotation: = 0
+
+      
+
+   .. attribute:: PASSED
+      :annotation: = 1
+
+      
+
+   .. attribute:: FAILED
+      :annotation: = 2
+
+      
+
+
+.. py:class:: Message
+
+   :param summary: a concise outcome
+   :param detailed: detailed message
+   :param errors: error messages grouped by attributes
+
+   .. attribute:: summary
+      :annotation: :str
+
+      
+
+   .. attribute:: detailed
+      :annotation: :Optional[str]
+
+      
+
+   .. attribute:: errors
+      :annotation: :Optional[dict]
+
+      
+
+
+.. py:class:: Result
+
+   :param name: a rule name
+   :param messages: messages separated by severity
+   :param _stats: pandas data to plot
+   :param items_count: the count of verified items
+   :param err_items_count: the number of error items
+   :param _figures: a list of graphs created from stats
+
+   .. attribute:: name
+      :annotation: :str
+
+      
+
+   .. attribute:: messages
+      :annotation: :Dict[Level, List[Message]]
+
+      
+
+   .. attribute:: _stats
+      :annotation: :Optional[List[Stat]]
+
+      
+
+   .. attribute:: items_count
+      :annotation: :Optional[int] = 0
+
+      
+
+   .. attribute:: err_items_count
+      :annotation: :Optional[int] = 0
+
+      
+
+   .. attribute:: _figures
+      :annotation: :Optional[List[go.FigureWidget]]
+
+      
+
+   .. method:: __eq__(self, other)
+
+
+
+   .. method:: tensors_equal(left:Stat, right:Stat)
+      :staticmethod:
+
+
+
+   .. method:: info(self)
+      :property:
+
+
+
+   .. method:: warnings(self)
+      :property:
+
+
+
+   .. method:: errors(self)
+      :property:
+
+
+
+   .. method:: stats(self)
+      :property:
+
+
+
+   .. method:: figures(self)
+      :property:
+
+
+
+   .. method:: add_info(self, summary, detailed=None, errors=None)
+
+
+
+   .. method:: add_warning(self, summary, detailed=None, errors=None)
+
+
+
+   .. method:: add_error(self, summary, detailed=None, errors=None)
+
+
+
+   .. method:: add_message(self, level:Level, summary:str, detailed:Optional[str]=None, errors:Optional[dict]=None)
+
+
+
+   .. method:: detailed_messages_count(self)
+      :property:
+
+
+
+   .. method:: get_errors_count(self)
+
+
+
+   .. method:: get_detailed_messages_count(self)
+
+
+
+   .. method:: show(self, short:bool=False, keys_limit:int=10)
+
+
+
+   .. method:: create_figures(stats:List[Stat], name:str)
+      :staticmethod:
+
+
+
+   .. method:: build_stack_bar_data(values_counts:List[pd.Series])
+      :staticmethod:
+
+
+      Create data for plotly stack bar chart with consistent colors between
+      bars. Each bar values have indexes unique to the bar, without any correlation
+      to other bars.
+
+      :param values_counts: an array of value_counts series
+
+      :returns: A list of Bar objects.
+
+
+   .. method:: get_layout(name:str, rows_count:int)
+      :staticmethod:
+
+
+
+   .. method:: make_annotations(stat:pd.Series)
+      :staticmethod:
+
+
+
+   .. method:: build_box_subplots(stat:pd.DataFrame)
+      :staticmethod:
+
+
+      Create a figure with box subplots showing fields coverages for jobs.
+
+      :param stat: a dataframe with field coverages
+
+      :returns: A figure with box subplots
+
+
+

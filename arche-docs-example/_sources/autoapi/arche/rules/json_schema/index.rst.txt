@@ -1,0 +1,25 @@
+:mod:`arche.rules.json_schema`
+==============================
+
+.. py:module:: arche.rules.json_schema
+
+
+Module Contents
+---------------
+
+.. function:: validate(schema:RawSchema, raw_items:RawItems, keys:pd.Index, fast:bool=False) -> Result
+
+   Run JSON schema validation against data.
+
+   :param fast: defines if we use fastjsonschema or jsonschema validation
+
+   :returns: Schema errors if any
+
+
+.. function:: check_tags(source_columns:np.ndarray, target_columns:np.ndarray, tags:TaggedFields) -> Result
+
+   Check tags from schema.
+
+   :returns: Used tags. Errors if tagged fields are not in source or target columns.
+
+

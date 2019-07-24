@@ -1,0 +1,96 @@
+:mod:`arche.arche`
+==================
+
+.. py:module:: arche.arche
+
+
+Module Contents
+---------------
+
+.. data:: logger
+   
+
+   
+
+.. py:class:: Arche(source:Union[str, pd.DataFrame, RawItems], schema:Optional[SchemaSource]=None, target:Optional[Union[str, pd.DataFrame]]=None, count:Optional[int]=None, start:Union[str, int]=None, filters:Optional[api.Filters]=None, expand:bool=None)
+
+   .. method:: source_items(self)
+      :property:
+
+
+
+   .. method:: target_items(self)
+      :property:
+
+
+
+   .. method:: schema(self)
+      :property:
+
+
+
+   .. method:: get_items(source:Union[str, pd.DataFrame, RawItems], count:Optional[int], start:Union[str, int], filters:Optional[api.Filters])
+      :staticmethod:
+
+
+
+   .. method:: save_result(self, rule_result)
+
+
+
+   .. method:: report_all(self, short:bool=False)
+
+
+
+   .. method:: run_all_rules(self)
+
+
+
+   .. method:: data_quality_report(self, bucket:Optional[str]=None)
+
+
+
+   .. method:: run_general_rules(self)
+
+
+
+   .. method:: validate_with_json_schema(self)
+
+
+      Run JSON schema check and output results. It will try to find all errors, but
+      there are no guarantees. Slower than `check_with_json_schema()`
+
+
+   .. method:: glance(self)
+
+
+      Run JSON schema check and output results. In most cases it will return
+      only the first error per item. Usable for big jobs as it's about 100x faster than
+      `validate_with_json_schema()`.
+
+
+   .. method:: run_schema_rules(self)
+
+
+
+   .. method:: run_customized_rules(self, items, tagged_fields)
+
+
+
+   .. method:: check_metadata(self, job)
+
+
+
+   .. method:: compare_metadata(self, source_job, target_job)
+
+
+
+   .. method:: run_comparison_rules(self)
+
+
+
+   .. method:: compare_with_customized_rules(self, source_items, target_items, tagged_fields)
+
+
+
+

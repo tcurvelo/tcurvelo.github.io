@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>arche.rules.result &#8212; Arche 0.3.6 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-arche.rules.result">
+<span id="arche-rules-result"></span><h1><a class="reference internal" href="#module-arche.rules.result" title="arche.rules.result"><code class="xref py py-mod docutils literal notranslate"><span class="pre">arche.rules.result</span></code></a><a class="headerlink" href="#module-arche.rules.result" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="arche.rules.result.Stat">
+<code class="sig-prename descclassname">arche.rules.result.</code><code class="sig-name descname">Stat</code><a class="headerlink" href="#arche.rules.result.Stat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="arche.rules.result.COLORS">
+<code class="sig-prename descclassname">arche.rules.result.</code><code class="sig-name descname">COLORS</code><a class="headerlink" href="#arche.rules.result.COLORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="arche.rules.result.Level">
+<em class="property">class </em><code class="sig-prename descclassname">arche.rules.result.</code><code class="sig-name descname">Level</code><a class="headerlink" href="#arche.rules.result.Level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<dl class="attribute">
+<dt id="arche.rules.result.Level.ERROR">
+<code class="sig-name descname">ERROR</code><em class="property"> = 2</em><a class="headerlink" href="#arche.rules.result.Level.ERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Level.WARNING">
+<code class="sig-name descname">WARNING</code><em class="property"> = 1</em><a class="headerlink" href="#arche.rules.result.Level.WARNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Level.INFO">
+<code class="sig-name descname">INFO</code><em class="property"> = 0</em><a class="headerlink" href="#arche.rules.result.Level.INFO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="arche.rules.result.Outcome">
+<em class="property">class </em><code class="sig-prename descclassname">arche.rules.result.</code><code class="sig-name descname">Outcome</code><a class="headerlink" href="#arche.rules.result.Outcome" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<dl class="attribute">
+<dt id="arche.rules.result.Outcome.SKIPPED">
+<code class="sig-name descname">SKIPPED</code><em class="property"> = 0</em><a class="headerlink" href="#arche.rules.result.Outcome.SKIPPED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Outcome.PASSED">
+<code class="sig-name descname">PASSED</code><em class="property"> = 1</em><a class="headerlink" href="#arche.rules.result.Outcome.PASSED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Outcome.FAILED">
+<code class="sig-name descname">FAILED</code><em class="property"> = 2</em><a class="headerlink" href="#arche.rules.result.Outcome.FAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="arche.rules.result.Message">
+<em class="property">class </em><code class="sig-prename descclassname">arche.rules.result.</code><code class="sig-name descname">Message</code><a class="headerlink" href="#arche.rules.result.Message" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>summary</strong> – a concise outcome</p></li>
+<li><p><strong>detailed</strong> – detailed message</p></li>
+<li><p><strong>errors</strong> – error messages grouped by attributes</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="arche.rules.result.Message.summary">
+<code class="sig-name descname">summary</code><em class="property"> :str</em><a class="headerlink" href="#arche.rules.result.Message.summary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Message.detailed">
+<code class="sig-name descname">detailed</code><em class="property"> :Optional[str]</em><a class="headerlink" href="#arche.rules.result.Message.detailed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Message.errors">
+<code class="sig-name descname">errors</code><em class="property"> :Optional[dict]</em><a class="headerlink" href="#arche.rules.result.Message.errors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="arche.rules.result.Result">
+<em class="property">class </em><code class="sig-prename descclassname">arche.rules.result.</code><code class="sig-name descname">Result</code><a class="headerlink" href="#arche.rules.result.Result" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – a rule name</p></li>
+<li><p><strong>messages</strong> – messages separated by severity</p></li>
+<li><p><strong>_stats</strong> – pandas data to plot</p></li>
+<li><p><strong>items_count</strong> – the count of verified items</p></li>
+<li><p><strong>err_items_count</strong> – the number of error items</p></li>
+<li><p><strong>_figures</strong> – a list of graphs created from stats</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="arche.rules.result.Result.name">
+<code class="sig-name descname">name</code><em class="property"> :str</em><a class="headerlink" href="#arche.rules.result.Result.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Result.messages">
+<code class="sig-name descname">messages</code><em class="property"> :Dict[Level, List[Message]]</em><a class="headerlink" href="#arche.rules.result.Result.messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Result._stats">
+<code class="sig-name descname">_stats</code><em class="property"> :Optional[List[Stat]]</em><a class="headerlink" href="#arche.rules.result.Result._stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Result.items_count">
+<code class="sig-name descname">items_count</code><em class="property"> :Optional[int] = 0</em><a class="headerlink" href="#arche.rules.result.Result.items_count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Result.err_items_count">
+<code class="sig-name descname">err_items_count</code><em class="property"> :Optional[int] = 0</em><a class="headerlink" href="#arche.rules.result.Result.err_items_count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.rules.result.Result._figures">
+<code class="sig-name descname">_figures</code><em class="property"> :Optional[List[go.FigureWidget]]</em><a class="headerlink" href="#arche.rules.result.Result._figures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.__eq__">
+<code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">other</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.tensors_equal">
+<em class="property">static </em><code class="sig-name descname">tensors_equal</code><span class="sig-paren">(</span><em class="sig-param">left:Stat</em>, <em class="sig-param">right:Stat</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.tensors_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.info">
+<em class="property">property </em><code class="sig-name descname">info</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.warnings">
+<em class="property">property </em><code class="sig-name descname">warnings</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.warnings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.errors">
+<em class="property">property </em><code class="sig-name descname">errors</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.errors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.stats">
+<em class="property">property </em><code class="sig-name descname">stats</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.figures">
+<em class="property">property </em><code class="sig-name descname">figures</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.figures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.add_info">
+<code class="sig-name descname">add_info</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">summary</em>, <em class="sig-param">detailed=None</em>, <em class="sig-param">errors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.add_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.add_warning">
+<code class="sig-name descname">add_warning</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">summary</em>, <em class="sig-param">detailed=None</em>, <em class="sig-param">errors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.add_warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.add_error">
+<code class="sig-name descname">add_error</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">summary</em>, <em class="sig-param">detailed=None</em>, <em class="sig-param">errors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.add_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.add_message">
+<code class="sig-name descname">add_message</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">level:Level</em>, <em class="sig-param">summary:str</em>, <em class="sig-param">detailed:Optional[str]=None</em>, <em class="sig-param">errors:Optional[dict]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.add_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.detailed_messages_count">
+<em class="property">property </em><code class="sig-name descname">detailed_messages_count</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.detailed_messages_count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.get_errors_count">
+<code class="sig-name descname">get_errors_count</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.get_errors_count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.get_detailed_messages_count">
+<code class="sig-name descname">get_detailed_messages_count</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.get_detailed_messages_count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">short:bool=False</em>, <em class="sig-param">keys_limit:int=10</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.create_figures">
+<em class="property">static </em><code class="sig-name descname">create_figures</code><span class="sig-paren">(</span><em class="sig-param">stats:List[Stat], name:str</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.create_figures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.build_stack_bar_data">
+<em class="property">static </em><code class="sig-name descname">build_stack_bar_data</code><span class="sig-paren">(</span><em class="sig-param">values_counts:List[pd.Series]</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.build_stack_bar_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create data for plotly stack bar chart with consistent colors between
+bars. Each bar values have indexes unique to the bar, without any correlation
+to other bars.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>values_counts</strong> – an array of value_counts series</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of Bar objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.get_layout">
+<em class="property">static </em><code class="sig-name descname">get_layout</code><span class="sig-paren">(</span><em class="sig-param">name:str</em>, <em class="sig-param">rows_count:int</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.get_layout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.make_annotations">
+<em class="property">static </em><code class="sig-name descname">make_annotations</code><span class="sig-paren">(</span><em class="sig-param">stat:pd.Series</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.make_annotations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.rules.result.Result.build_box_subplots">
+<em class="property">static </em><code class="sig-name descname">build_box_subplots</code><span class="sig-paren">(</span><em class="sig-param">stat:pd.DataFrame</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.rules.result.Result.build_box_subplots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a figure with box subplots showing fields coverages for jobs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stat</strong> – a dataframe with field coverages</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A figure with box subplots</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">Arche</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Handling-items-of-different-types.html">Handling items of different types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018-2019, Arche developers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../../_sources/autoapi/arche/rules/result/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

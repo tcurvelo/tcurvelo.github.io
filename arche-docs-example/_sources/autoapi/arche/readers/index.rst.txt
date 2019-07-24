@@ -1,0 +1,16 @@
+:mod:`arche.readers`
+====================
+
+.. py:module:: arche.readers
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   items/index.rst
+   schema/index.rst
+
+

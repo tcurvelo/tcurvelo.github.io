@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>arche.tools.schema &#8212; Arche 0.3.6 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-arche.tools.schema">
+<span id="arche-tools-schema"></span><h1><a class="reference internal" href="#module-arche.tools.schema" title="arche.tools.schema"><code class="xref py py-mod docutils literal notranslate"><span class="pre">arche.tools.schema</span></code></a><a class="headerlink" href="#module-arche.tools.schema" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="arche.tools.schema.basic_json_schema">
+<code class="sig-prename descclassname">arche.tools.schema.</code><code class="sig-name descname">basic_json_schema</code><span class="sig-paren">(</span><em class="sig-param">data_source:str</em>, <em class="sig-param">items_numbers:List[int]=None</em><span class="sig-paren">)</span> &#x2192; Schema<a class="headerlink" href="#arche.tools.schema.basic_json_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print a json schema based on the provided job_key and item numbers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source</strong> – a collection or job key</p></li>
+<li><p><strong>items_numbers</strong> – array of item numbers to create schema from</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="arche.tools.schema.create_json_schema">
+<code class="sig-prename descclassname">arche.tools.schema.</code><code class="sig-name descname">create_json_schema</code><span class="sig-paren">(</span><em class="sig-param">source_key:str</em>, <em class="sig-param">items_numbers:Optional[List[int]]=None</em><span class="sig-paren">)</span> &#x2192; Schema<a class="headerlink" href="#arche.tools.schema.create_json_schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="arche.tools.schema.infer_schema">
+<code class="sig-prename descclassname">arche.tools.schema.</code><code class="sig-name descname">infer_schema</code><span class="sig-paren">(</span><em class="sig-param">samples:List[Dict[str, Any]]</em><span class="sig-paren">)</span> &#x2192; Schema<a class="headerlink" href="#arche.tools.schema.infer_schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="arche.tools.schema.set_item_no">
+<code class="sig-prename descclassname">arche.tools.schema.</code><code class="sig-name descname">set_item_no</code><span class="sig-paren">(</span><em class="sig-param">items_count:int</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#arche.tools.schema.set_item_no" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate random numbers within items_count range</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Random 4 numbers if items_count &gt; 4 otherwise items numbers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="arche.tools.schema.fast_validate">
+<code class="sig-prename descclassname">arche.tools.schema.</code><code class="sig-name descname">fast_validate</code><span class="sig-paren">(</span><em class="sig-param">schema:Schema</em>, <em class="sig-param">raw_items:RawItems</em>, <em class="sig-param">keys:pd.Index</em><span class="sig-paren">)</span> &#x2192; Dict[str, set]<a class="headerlink" href="#arche.tools.schema.fast_validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify items one by one. It stops after the first error in an item in most cases.
+Faster than jsonschema validation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema</strong> – a JSON schema</p></li>
+<li><p><strong>raw_items</strong> – a raw data to validate one by one</p></li>
+<li><p><strong>keys</strong> – keys corresponding to raw_items index</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of errors with message and item keys</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="arche.tools.schema.full_validate">
+<code class="sig-prename descclassname">arche.tools.schema.</code><code class="sig-name descname">full_validate</code><span class="sig-paren">(</span><em class="sig-param">schema:Schema</em>, <em class="sig-param">raw_items:RawItems</em>, <em class="sig-param">keys:pd.Index</em><span class="sig-paren">)</span> &#x2192; Dict[str, set]<a class="headerlink" href="#arche.tools.schema.full_validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function uses jsonschema validator which returns all found error per item.
+See <cite>fast_validate()</cite> for arguments descriptions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arche.tools.schema.format_validation_message">
+<code class="sig-prename descclassname">arche.tools.schema.</code><code class="sig-name descname">format_validation_message</code><span class="sig-paren">(</span><em class="sig-param">error_msg:str</em>, <em class="sig-param">path:Deque</em>, <em class="sig-param">schema_path:Deque</em>, <em class="sig-param">validator:str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#arche.tools.schema.format_validation_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">Arche</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Handling-items-of-different-types.html">Handling items of different types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018-2019, Arche developers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../../_sources/autoapi/arche/tools/schema/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

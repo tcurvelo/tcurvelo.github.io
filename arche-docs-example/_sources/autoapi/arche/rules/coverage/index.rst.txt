@@ -1,0 +1,48 @@
+:mod:`arche.rules.coverage`
+===========================
+
+.. py:module:: arche.rules.coverage
+
+
+Module Contents
+---------------
+
+.. function:: check_fields_coverage(df:pd.DataFrame) -> Result
+
+   Get fields coverage from df. Coverage reflects the percentage of real values
+   (exluding `nan`) per column.
+
+   :param df: a data to count the coverage
+
+   :returns: A result with coverage for all columns in provided df. If column contains only `nan`,
+             treat it as an error.
+
+
+.. function:: get_difference(source_job:Job, target_job:Job, err_thr:float=0.1, warn_thr:float=0.05) -> Result
+
+   Get difference between jobs coverages. The coverage is job fields counts
+   divided on the job size.
+
+   :param source_job: a base job, the difference is calculated from it
+   :param target_job: a job to compare
+   :param err_thr: a threshold for errors
+   :param warn_thr: a threshold for warnings
+
+   :returns: A Result instance with huge dif and stats with fields counts coverage and dif
+
+
+.. function:: compare_scraped_fields(source_df:pd.DataFrame, target_df:pd.DataFrame) -> Result
+
+   Find new or missing columns between source_df and target_df
+
+
+.. function:: anomalies(target:str, sample:List[str]) -> Result
+
+   Find fields with significant deviation. Significant means `dev > 2 * std()`
+
+   :param target: where to look for anomalies
+   :param sample: a list of jobs keys to infer metadata from
+
+   :returns: A Result with a dataframe of significant deviations
+
+

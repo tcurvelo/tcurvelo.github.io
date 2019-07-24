@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>arche.readers.schema &#8212; Arche 0.3.6 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-arche.readers.schema">
+<span id="arche-readers-schema"></span><h1><a class="reference internal" href="#module-arche.readers.schema" title="arche.readers.schema"><code class="xref py py-mod docutils literal notranslate"><span class="pre">arche.readers.schema</span></code></a><a class="headerlink" href="#module-arche.readers.schema" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="arche.readers.schema.EXTENDED_KEYWORDS">
+<code class="sig-prename descclassname">arche.readers.schema.</code><code class="sig-name descname">EXTENDED_KEYWORDS</code><a class="headerlink" href="#arche.readers.schema.EXTENDED_KEYWORDS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="arche.readers.schema.SchemaObject">
+<code class="sig-prename descclassname">arche.readers.schema.</code><code class="sig-name descname">SchemaObject</code><a class="headerlink" href="#arche.readers.schema.SchemaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="arche.readers.schema.RawSchema">
+<code class="sig-prename descclassname">arche.readers.schema.</code><code class="sig-name descname">RawSchema</code><a class="headerlink" href="#arche.readers.schema.RawSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="arche.readers.schema.SchemaSource">
+<code class="sig-prename descclassname">arche.readers.schema.</code><code class="sig-name descname">SchemaSource</code><a class="headerlink" href="#arche.readers.schema.SchemaSource" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="arche.readers.schema.TaggedFields">
+<code class="sig-prename descclassname">arche.readers.schema.</code><code class="sig-name descname">TaggedFields</code><a class="headerlink" href="#arche.readers.schema.TaggedFields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="arche.readers.schema.set_auth">
+<code class="sig-prename descclassname">arche.readers.schema.</code><code class="sig-name descname">set_auth</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#arche.readers.schema.set_auth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="arche.readers.schema.Tag">
+<em class="property">class </em><code class="sig-prename descclassname">arche.readers.schema.</code><code class="sig-name descname">Tag</code><a class="headerlink" href="#arche.readers.schema.Tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<dl class="attribute">
+<dt id="arche.readers.schema.Tag.unique">
+<code class="sig-name descname">unique</code><em class="property"> = [0]</em><a class="headerlink" href="#arche.readers.schema.Tag.unique" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.readers.schema.Tag.category">
+<code class="sig-name descname">category</code><em class="property"> = [1]</em><a class="headerlink" href="#arche.readers.schema.Tag.category" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.readers.schema.Tag.name_field">
+<code class="sig-name descname">name_field</code><em class="property"> = [2]</em><a class="headerlink" href="#arche.readers.schema.Tag.name_field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.readers.schema.Tag.product_url_field">
+<code class="sig-name descname">product_url_field</code><em class="property"> = [3]</em><a class="headerlink" href="#arche.readers.schema.Tag.product_url_field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.readers.schema.Tag.product_price_field">
+<code class="sig-name descname">product_price_field</code><em class="property"> = [4]</em><a class="headerlink" href="#arche.readers.schema.Tag.product_price_field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arche.readers.schema.Tag.product_price_was_field">
+<code class="sig-name descname">product_price_was_field</code><em class="property"> = [5]</em><a class="headerlink" href="#arche.readers.schema.Tag.product_price_was_field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="arche.readers.schema.Schema">
+<em class="property">class </em><code class="sig-prename descclassname">arche.readers.schema.</code><code class="sig-name descname">Schema</code><span class="sig-paren">(</span><em class="sig-param">source:SchemaSource</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.schema.Schema" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="arche.readers.schema.Schema.allowed_tags">
+<code class="sig-name descname">allowed_tags</code><a class="headerlink" href="#arche.readers.schema.Schema.allowed_tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.schema.Schema.json">
+<code class="sig-name descname">json</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.schema.Schema.json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.schema.Schema.__repr__">
+<code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.schema.Schema.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.schema.Schema.get_enums">
+<code class="sig-name descname">get_enums</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.schema.Schema.get_enums" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.schema.Schema.get_tags">
+<em class="property">static </em><code class="sig-name descname">get_tags</code><span class="sig-paren">(</span><em class="sig-param">schema:RawSchema</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.schema.Schema.get_tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.schema.Schema.get_field_tags">
+<em class="property">classmethod </em><code class="sig-name descname">get_field_tags</code><span class="sig-paren">(</span><em class="sig-param">cls, tags:List[str], field:str, tagged_fields:defaultdict</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.schema.Schema.get_field_tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.schema.Schema.parse_tag">
+<em class="property">static </em><code class="sig-name descname">parse_tag</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.schema.Schema.parse_tag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.schema.Schema.read">
+<em class="property">static </em><code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">schema_source:SchemaSource</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.schema.Schema.read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.readers.schema.Schema.from_url">
+<em class="property">static </em><code class="sig-name descname">from_url</code><span class="sig-paren">(</span><em class="sig-param">path:str</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.readers.schema.Schema.from_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">Arche</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Handling-items-of-different-types.html">Handling items of different types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018-2019, Arche developers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../../_sources/autoapi/arche/readers/schema/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

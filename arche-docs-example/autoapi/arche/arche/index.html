@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>arche.arche &#8212; Arche 0.3.6 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-arche.arche">
+<span id="arche-arche"></span><h1><a class="reference internal" href="#module-arche.arche" title="arche.arche"><code class="xref py py-mod docutils literal notranslate"><span class="pre">arche.arche</span></code></a><a class="headerlink" href="#module-arche.arche" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="arche.arche.logger">
+<code class="sig-prename descclassname">arche.arche.</code><code class="sig-name descname">logger</code><a class="headerlink" href="#arche.arche.logger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="arche.arche.Arche">
+<em class="property">class </em><code class="sig-prename descclassname">arche.arche.</code><code class="sig-name descname">Arche</code><span class="sig-paren">(</span><em class="sig-param">source:Union[str, pd.DataFrame, RawItems], schema:Optional[SchemaSource]=None, target:Optional[Union[str, pd.DataFrame]]=None, count:Optional[int]=None, start:Union[str, int]=None, filters:Optional[api.Filters]=None, expand:bool=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="arche.arche.Arche.source_items">
+<em class="property">property </em><code class="sig-name descname">source_items</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.source_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.target_items">
+<em class="property">property </em><code class="sig-name descname">target_items</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.target_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.schema">
+<em class="property">property </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.get_items">
+<em class="property">static </em><code class="sig-name descname">get_items</code><span class="sig-paren">(</span><em class="sig-param">source:Union[str, pd.DataFrame, RawItems], count:Optional[int], start:Union[str, int], filters:Optional[api.Filters]</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.get_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.save_result">
+<code class="sig-name descname">save_result</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">rule_result</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.save_result" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.report_all">
+<code class="sig-name descname">report_all</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">short:bool=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.report_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.run_all_rules">
+<code class="sig-name descname">run_all_rules</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.run_all_rules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.data_quality_report">
+<code class="sig-name descname">data_quality_report</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">bucket:Optional[str]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.data_quality_report" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.run_general_rules">
+<code class="sig-name descname">run_general_rules</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.run_general_rules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.validate_with_json_schema">
+<code class="sig-name descname">validate_with_json_schema</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.validate_with_json_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run JSON schema check and output results. It will try to find all errors, but
+there are no guarantees. Slower than <cite>check_with_json_schema()</cite></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.glance">
+<code class="sig-name descname">glance</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.glance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run JSON schema check and output results. In most cases it will return
+only the first error per item. Usable for big jobs as it’s about 100x faster than
+<cite>validate_with_json_schema()</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.run_schema_rules">
+<code class="sig-name descname">run_schema_rules</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.run_schema_rules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.run_customized_rules">
+<code class="sig-name descname">run_customized_rules</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">items</em>, <em class="sig-param">tagged_fields</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.run_customized_rules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.check_metadata">
+<code class="sig-name descname">check_metadata</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">job</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.check_metadata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.compare_metadata">
+<code class="sig-name descname">compare_metadata</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">source_job</em>, <em class="sig-param">target_job</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.compare_metadata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.run_comparison_rules">
+<code class="sig-name descname">run_comparison_rules</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.run_comparison_rules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.arche.Arche.compare_with_customized_rules">
+<code class="sig-name descname">compare_with_customized_rules</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">source_items</em>, <em class="sig-param">target_items</em>, <em class="sig-param">tagged_fields</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.arche.Arche.compare_with_customized_rules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Arche</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Handling-items-of-different-types.html">Handling items of different types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nbs/notebooks.html">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nbs/notebooks.html#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018-2019, Arche developers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/autoapi/arche/arche/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

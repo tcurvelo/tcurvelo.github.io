@@ -1,0 +1,27 @@
+:mod:`arche.rules.others`
+=========================
+
+.. py:module:: arche.rules.others
+
+
+Module Contents
+---------------
+
+.. function:: compare_boolean_fields(source_df:pd.DataFrame, target_df:pd.DataFrame, err_thr:float=0.1, warn_thr:float=0.05) -> Result
+
+   Compare booleans distribution between two dataframes
+
+   :returns: A result containing dataframe with distributions and messages if differences
+             are in thresholds
+
+
+.. function:: fields_to_compare(source_df:pd.DataFrame, target_df:pd.DataFrame) -> bool
+
+
+.. function:: garbage_symbols(df:pd.DataFrame) -> Result
+
+   Find unwanted symbols in `np.object` columns.
+
+   :returns: A result containing item keys per field which contained any trash symbol
+
+

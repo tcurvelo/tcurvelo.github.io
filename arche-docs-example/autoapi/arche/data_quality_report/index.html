@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>arche.data_quality_report &#8212; Arche 0.3.6 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-arche.data_quality_report">
+<span id="arche-data-quality-report"></span><h1><a class="reference internal" href="#module-arche.data_quality_report" title="arche.data_quality_report"><code class="xref py py-mod docutils literal notranslate"><span class="pre">arche.data_quality_report</span></code></a><a class="headerlink" href="#module-arche.data_quality_report" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arche.data_quality_report.DataQualityReport">
+<em class="property">class </em><code class="sig-prename descclassname">arche.data_quality_report.</code><code class="sig-name descname">DataQualityReport</code><span class="sig-paren">(</span><em class="sig-param">items:CloudItems</em>, <em class="sig-param">schema:Schema</em>, <em class="sig-param">report:Report</em>, <em class="sig-param">bucket:Optional[str]=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.create_figures">
+<code class="sig-name descname">create_figures</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">items:CloudItems</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.create_figures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.plot_to_notebook">
+<code class="sig-name descname">plot_to_notebook</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.plot_to_notebook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.plot_html_to_stream">
+<code class="sig-name descname">plot_html_to_stream</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.plot_html_to_stream" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.create_appendix">
+<code class="sig-name descname">create_appendix</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">schema</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.create_appendix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.save_report_to_bucket">
+<code class="sig-name descname">save_report_to_bucket</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">project_id</em>, <em class="sig-param">spider</em>, <em class="sig-param">bucket</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.save_report_to_bucket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.score_table">
+<code class="sig-name descname">score_table</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">quality_estimation</em>, <em class="sig-param">field_accuracy</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.score_table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.job_summary_table">
+<code class="sig-name descname">job_summary_table</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">job</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.job_summary_table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.rules_summary_table">
+<code class="sig-name descname">rules_summary_table</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">df</em>, <em class="sig-param">no_of_validation_warnings</em>, <em class="sig-param">name_field</em>, <em class="sig-param">url_field</em>, <em class="sig-param">no_of_checked_duplicated_items</em>, <em class="sig-param">no_of_duplicated_items</em>, <em class="sig-param">unique</em>, <em class="sig-param">no_of_checked_skus</em>, <em class="sig-param">no_of_duplicated_skus</em>, <em class="sig-param">price_field</em>, <em class="sig-param">price_was_field</em>, <em class="sig-param">no_of_checked_price_items</em>, <em class="sig-param">no_of_price_warns</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.rules_summary_table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.scraped_fields_coverage">
+<code class="sig-name descname">scraped_fields_coverage</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">df:pd.DataFrame</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.scraped_fields_coverage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arche.data_quality_report.DataQualityReport.coverage_by_categories">
+<code class="sig-name descname">coverage_by_categories</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">df</em>, <em class="sig-param">tags</em><span class="sig-paren">)</span><a class="headerlink" href="#arche.data_quality_report.DataQualityReport.coverage_by_categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make tables which show the number of items per category,
+set up with a category tag</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – a dataframe of items</p></li>
+<li><p><strong>tags</strong> – a dict of tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">Arche</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Handling-items-of-different-types.html">Handling items of different types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nbs/notebooks.html">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nbs/notebooks.html#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018-2019, Arche developers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/autoapi/arche/data_quality_report/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,58 @@
+:mod:`arche.data_quality_report`
+================================
+
+.. py:module:: arche.data_quality_report
+
+
+Module Contents
+---------------
+
+.. py:class:: DataQualityReport(items:CloudItems, schema:Schema, report:Report, bucket:Optional[str]=None)
+
+   .. method:: create_figures(self, items:CloudItems)
+
+
+
+   .. method:: plot_to_notebook(self)
+
+
+
+   .. method:: plot_html_to_stream(self)
+
+
+
+   .. method:: create_appendix(self, schema)
+
+
+
+   .. method:: save_report_to_bucket(self, project_id, spider, bucket)
+
+
+
+   .. method:: score_table(self, quality_estimation, field_accuracy)
+
+
+
+   .. method:: job_summary_table(self, job)
+
+
+
+   .. method:: rules_summary_table(self, df, no_of_validation_warnings, name_field, url_field, no_of_checked_duplicated_items, no_of_duplicated_items, unique, no_of_checked_skus, no_of_duplicated_skus, price_field, price_was_field, no_of_checked_price_items, no_of_price_warns, **kwargs)
+
+
+
+   .. method:: scraped_fields_coverage(self, df:pd.DataFrame)
+
+
+
+   .. method:: coverage_by_categories(self, df, tags)
+
+
+      Make tables which show the number of items per category,
+      set up with a category tag
+
+      :param df: a dataframe of items
+      :param tags: a dict of tags
+
+
+

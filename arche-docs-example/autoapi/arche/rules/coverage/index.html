@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>arche.rules.coverage &#8212; Arche 0.3.6 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-arche.rules.coverage">
+<span id="arche-rules-coverage"></span><h1><a class="reference internal" href="#module-arche.rules.coverage" title="arche.rules.coverage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">arche.rules.coverage</span></code></a><a class="headerlink" href="#module-arche.rules.coverage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="arche.rules.coverage.check_fields_coverage">
+<code class="sig-prename descclassname">arche.rules.coverage.</code><code class="sig-name descname">check_fields_coverage</code><span class="sig-paren">(</span><em class="sig-param">df:pd.DataFrame</em><span class="sig-paren">)</span> &#x2192; Result<a class="headerlink" href="#arche.rules.coverage.check_fields_coverage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get fields coverage from df. Coverage reflects the percentage of real values
+(exluding <cite>nan</cite>) per column.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> – a data to count the coverage</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A result with coverage for all columns in provided df. If column contains only <cite>nan</cite>,
+treat it as an error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="arche.rules.coverage.get_difference">
+<code class="sig-prename descclassname">arche.rules.coverage.</code><code class="sig-name descname">get_difference</code><span class="sig-paren">(</span><em class="sig-param">source_job:Job</em>, <em class="sig-param">target_job:Job</em>, <em class="sig-param">err_thr:float=0.1</em>, <em class="sig-param">warn_thr:float=0.05</em><span class="sig-paren">)</span> &#x2192; Result<a class="headerlink" href="#arche.rules.coverage.get_difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get difference between jobs coverages. The coverage is job fields counts
+divided on the job size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_job</strong> – a base job, the difference is calculated from it</p></li>
+<li><p><strong>target_job</strong> – a job to compare</p></li>
+<li><p><strong>err_thr</strong> – a threshold for errors</p></li>
+<li><p><strong>warn_thr</strong> – a threshold for warnings</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A Result instance with huge dif and stats with fields counts coverage and dif</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="arche.rules.coverage.compare_scraped_fields">
+<code class="sig-prename descclassname">arche.rules.coverage.</code><code class="sig-name descname">compare_scraped_fields</code><span class="sig-paren">(</span><em class="sig-param">source_df:pd.DataFrame</em>, <em class="sig-param">target_df:pd.DataFrame</em><span class="sig-paren">)</span> &#x2192; Result<a class="headerlink" href="#arche.rules.coverage.compare_scraped_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find new or missing columns between source_df and target_df</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arche.rules.coverage.anomalies">
+<code class="sig-prename descclassname">arche.rules.coverage.</code><code class="sig-name descname">anomalies</code><span class="sig-paren">(</span><em class="sig-param">target:str, sample:List[str]</em><span class="sig-paren">)</span> &#x2192; Result<a class="headerlink" href="#arche.rules.coverage.anomalies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find fields with significant deviation. Significant means <cite>dev &gt; 2 * std()</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – where to look for anomalies</p></li>
+<li><p><strong>sample</strong> – a list of jobs keys to infer metadata from</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A Result with a dataframe of significant deviations</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">Arche</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Handling-items-of-different-types.html">Handling items of different types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nbs/notebooks.html#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018-2019, Arche developers.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../../_sources/autoapi/arche/rules/coverage/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

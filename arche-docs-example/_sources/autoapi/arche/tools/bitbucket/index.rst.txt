@@ -1,0 +1,36 @@
+:mod:`arche.tools.bitbucket`
+============================
+
+.. py:module:: arche.tools.bitbucket
+
+
+Module Contents
+---------------
+
+.. data:: logger
+   
+
+   
+
+.. data:: AUTH_URL
+   :annotation: = https://bitbucket.org/site/oauth2/authorize?client_id=MKCfX5xkXHbdRPYwKa&response_type=token
+
+   
+
+.. data:: AUTH_ERROR_MSG
+   
+
+   
+
+.. function:: get_contents(url)
+
+
+.. function:: convert_to_api_url(url)
+
+
+.. function:: get_auth_header(token)
+
+
+.. function:: get_token()
+
+

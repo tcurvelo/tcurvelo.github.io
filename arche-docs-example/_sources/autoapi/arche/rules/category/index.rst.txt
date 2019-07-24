@@ -1,0 +1,62 @@
+:mod:`arche.rules.category`
+===========================
+
+.. py:module:: arche.rules.category
+
+
+Module Contents
+---------------
+
+.. function:: get_difference(source_df:pd.DataFrame, target_df:pd.DataFrame, category_names:List[str], err_thr:float=0.2, warn_thr:float=0.1) -> Result
+
+   Find and show differences between categories coverage, including `nan` values.
+   Coverage means value counts divided on total size.
+
+   :param source_df: a data you want to compare
+   :param target_df: a data you want to compare with
+   :param category_names: list of columns which values to compare
+   :param err_thr: sets error threshold
+   :param warn_thr: warning threshold
+
+   :returns: A result instance with messages containing significant difference defined by
+             thresholds, a dataframe showing all normalized value counts in percents and
+             a series containing significant difference.
+
+
+.. function:: get_coverage_per_category(df:pd.DataFrame, category_names:List[str]) -> Result
+
+   Get value counts per column, excluding nan.
+
+   :param df: a source data to assess
+   :param category_names: list of columns which values counts to see
+
+   :returns: Number of categories per field, value counts series for each field.
+
+
+.. function:: get_categories(df:pd.DataFrame, max_uniques:int=10) -> Result
+
+   Find category columns. A category column is the column which holds a limited number
+   of possible values, including `NAN`.
+
+   :param df: data
+   :param max_uniques: filter which determines which columns to use. Only columns with
+   :param the number of unique values less than or equal to `max_uniques` are category columns.:
+
+   :returns: A result with stats containing value counts of categorical columns.
+
+
+.. function:: find_likely_cats(df:pd.DataFrame, max_uniques:int, sample_size:int=5000) -> List[str]
+
+   Find columns which are probably categorical, including nested data.
+   In fact we filter from columns which are certainly not categorical by given `sample_size`.
+   Useful in cases with big datasets and nested data, since `value_counts`
+   performance degrades significantly (100x-10000x) in such cases.
+
+   :param df: where to find
+   :param max_uniques: how we decide what is a categorical column
+   :param sample_size: sample we look in. Defaults to 5000 since for bigger data
+   :param nested values make `value_counts` really slow after this number:
+
+   :returns: List of potential categorical column names.
+
+

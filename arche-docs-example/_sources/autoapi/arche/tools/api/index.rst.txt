@@ -1,0 +1,81 @@
+:mod:`arche.tools.api`
+======================
+
+.. py:module:: arche.tools.api
+
+
+Module Contents
+---------------
+
+.. data:: Filters
+   
+
+   
+
+.. function:: get_job(key:str) -> Job
+
+
+.. function:: get_jobs(keys:List[str]) -> List[Job]
+
+
+.. function:: get_collection(key)
+
+
+.. function:: get_errors_count(job)
+
+
+.. function:: get_job_state(job)
+
+
+.. function:: get_job_close_reason(job)
+
+
+.. function:: get_items_count(job)
+
+
+.. function:: get_counts(job:Job) -> Optional[Dict[str, int]]
+
+
+.. function:: get_finish_time_difference_in_days(job1, job2)
+
+
+.. function:: get_runtime(job)
+
+   Returns the runtime in milliseconds or None if job is still running
+
+
+.. function:: get_runtime_s(job)
+
+   Returns job runtime in milliseconds.
+
+
+.. function:: get_max_memusage(job)
+
+
+.. function:: get_response_status_count(job)
+
+
+.. function:: get_requests_count(job)
+
+
+.. function:: get_crawlera_user(job)
+
+
+.. function:: get_source(source_key)
+
+
+.. function:: get_items_with_pool(source_key:str, count:int, start_index:int, workers:int=4) -> np.ndarray
+
+   Concurrently reads items from API using Pool
+
+   :param source_key: a job or collection key, e.g. '112358/13/21'
+   :param count: a number of items to retrieve
+   :param start_index: an index to read from
+   :param workers: the number of separate processors to get data in
+
+   :returns: A numpy array of items
+
+
+.. function:: get_items(key:str, count:int, start_index:int, start:Optional[str], filters:Optional[Filters]=None, p_bar:Union[tqdm, tqdm_notebook]=tqdm_notebook, desc:Optional[str]=None) -> np.ndarray
+
+

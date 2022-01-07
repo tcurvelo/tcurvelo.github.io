@@ -1,4 +1,4 @@
-baseURL = "http://curvelo.net/"
+baseURL = "https://curvelo.net/"
 languageCode = "en-us"
 title = "Thiago Curvelo"
 theme = "hugo-sustain"

@@ -1,0 +1,17 @@
+baseURL = "http://curvelo.net/"
+languageCode = "en-us"
+title = "Thiago Curvelo"
+theme = "hugo-sustain"
+googleAnalytics = "UA-104571891-1"
+
+[params]
+  avatar = "img/profile.jpg"
+  author = "Thiago Curvelo"
+
+[params.social]
+  Github        = "tcurvelo"
+  LinkedIn      = "thiagocurvelo"
+  Twitter       = "tcurvelo"
+  Email         = "thiago@curvelo.net"
+  Stackoverflow = "408951"
+  Telegram      = "tcurvelo"

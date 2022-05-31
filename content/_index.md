@@ -2,6 +2,6 @@
 ---
 # Thiago Curvelo
 
-Software Engineer @ [Zyte (formely Scrapinghub)]
+Software Engineer @ [Tucows]
 
-[Zyte (formely Scrapinghub)]: https://www.zyte.com/
+[Tucows]: https://tucows.com/

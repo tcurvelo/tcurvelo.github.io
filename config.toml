@@ -1,17 +1,47 @@
 baseURL = "https://curvelo.net/"
-languageCode = "en-us"
-title = "Thiago Curvelo"
-theme = "hugo-sustain"
-googleAnalytics = "UA-104571891-1"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+[pagination]
+pagerSize = 20
+
+[markup.highlight]
+style = "github-dark"
 
 [params]
-  avatar = "img/profile.jpg"
   author = "Thiago Curvelo"
+  info = "Senior Software Engineer @ [Tucows](https://tucows.com)"
+  gravatar = "tcurvelo@gmail.com"
 
-[params.social]
-  Github        = "tcurvelo"
-  LinkedIn      = "thiagocurvelo"
-  Twitter       = "tcurvelo"
-  Email         = "thiago@curvelo.net"
-  Stackoverflow = "users/408951"
-  Telegram      = "tcurvelo"
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/tcurvelo/"
+[[params.social]]
+  name = "Linkedin"
+  icon = "fa-brands fa-linkedin fa-2x"
+  weight = 2
+  url = "https://linkedin.com/in/thiagocurvelo"
+[[params.social]]
+  name = "E-mail"
+  icon = "fa-solid fa-envelope fa-2x"
+  weight = 3
+  url = "mailto:thiago@curvelo.net"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa-brands fa-x-twitter fa-2x"
+  weight = 4
+  url = "https://twitter.com/tcurvelo/"
+[[params.social]]
+  name = "Stack Overflow"
+  icon = "fa-brands fa-stack-overflow fa-2x"
+  weight = 5
+  url = "https://stackoverflow.com/users/408951"
+[[params.social]]
+  name = "Telegram"
+  icon = "fa-brands fa-telegram fa-2x"
+  weight = 6
+  url = "https://t.me/tcurvelo/"

@@ -1,4 +1,5 @@
 baseURL = "https://curvelo.net/"
+title = "Thiago Curvelo | Software Engineer"
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
@@ -13,6 +14,11 @@ style = "github-dark"
   author = "Thiago Curvelo"
   info = "Senior Software Engineer @ [Tucows](https://tucows.com)"
   gravatar = "tcurvelo@gmail.com"
+  fediverseCreator = "@tcurvelo@bolha.us"
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-2T0VR00BLD'
 
 # Social links
 [[params.social]]
